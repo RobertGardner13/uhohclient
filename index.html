@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Verification</title>
+    <link rel="stylesheet"  href="styles.css">
+</head>
+<body>
+
+    <div>
+
+    <h1>super secure website login</h1>
+
+    <input type="text" id="pass" placeholder="Enter password">
+    <button onclick="verify()">Verify Password</button>
+
+    </div>
+
+    <script type="text/javascript">
+        function verify() {
+          var checkpass = document.getElementById("pass").value;
+          var split = 4;
+          // Adjusted checks based on the provided password
+          if (checkpass.substring(0, split) == 'byuk' &&
+              checkpass.substring(split, split*2) == 'g24{' &&
+              checkpass.substring(split*2, split*3) == 'uH_0' &&
+              checkpass.substring(split*3, split*4) == 'h_cl' &&
+              checkpass.substring(split*4, split*5) == '1ent' &&
+              checkpass.substring(split*5, split*6) == '_s1d' &&
+              checkpass.substring(split*6, split*7) == '3_1s' &&
+              checkpass.substring(split*7, split*8) == 'nt_S' &&
+              checkpass.substring(split*8, split*9) == '3cUr' &&
+              checkpass.substring(split*9) == '3591}') {
+            window.location.href = 'successpage.html'; // Redirects to successpage.html
+          } else {
+            alert("Incorrect password");
+          }
+        }
+    </script>
+
+    
+</body>
+</html>
